@@ -619,6 +619,373 @@
       transform: translateX(3px);
     }
 
+    /* ─── AI CREATIVE ─── */
+    .ai-creative {
+      padding: 120px 80px;
+      background: var(--cream);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ai-creative::before {
+      content: 'AI';
+      position: absolute;
+      left: -20px; top: -30px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(150px, 20vw, 260px);
+      font-weight: 300;
+      color: rgba(46, 31, 26, 0.025);
+      pointer-events: none;
+      user-select: none;
+      line-height: 1;
+    }
+
+    .ai-creative-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      margin-top: 50px;
+      align-items: start;
+    }
+
+    .ai-process {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .process-step {
+      display: flex;
+      gap: 20px;
+      padding: 24px;
+      border: 1px solid rgba(232, 196, 176, 0.2);
+      background: var(--warm-white);
+      transition: border-color 0.4s, transform 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .process-step:hover {
+      border-color: var(--blush);
+      transform: translateX(6px);
+    }
+
+    .process-step::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 3px;
+      background: var(--rose);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .process-step:hover::before { opacity: 1; }
+
+    .step-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      font-weight: 300;
+      color: var(--blush);
+      min-width: 36px;
+      line-height: 1;
+    }
+
+    .step-content h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--deep);
+      margin-bottom: 6px;
+    }
+
+    .step-content p {
+      font-size: 13px;
+      line-height: 1.75;
+      color: var(--mid);
+    }
+
+    .ai-tools-showcase {
+      background: var(--deep);
+      padding: 40px 36px;
+      position: relative;
+    }
+
+    .ai-tools-showcase h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      font-weight: 400;
+      color: var(--blush);
+      margin-bottom: 28px;
+    }
+
+    .tool-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .tool-item:last-child { border-bottom: none; }
+
+    .tool-icon {
+      width: 42px; height: 42px;
+      border: 1px solid rgba(232, 196, 176, 0.25);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .tool-info h4 {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--warm-white);
+      margin-bottom: 3px;
+    }
+
+    .tool-info p {
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+    }
+
+    .ai-product-note {
+      margin-top: 28px;
+      padding: 20px;
+      border: 1px solid rgba(232, 196, 176, 0.15);
+      font-size: 13px;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.5);
+      font-style: italic;
+    }
+
+    .ai-product-note strong {
+      color: var(--blush);
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    /* ─── AI ETHICS ─── */
+    .ai-ethics {
+      padding: 120px 80px;
+      background: var(--deep);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ai-ethics::before {
+      content: '';
+      position: absolute;
+      bottom: -120px; left: -120px;
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      border: 1px solid rgba(232, 196, 176, 0.05);
+      pointer-events: none;
+    }
+
+    .ai-ethics .section-title { color: var(--warm-white); }
+    .ai-ethics .section-label { color: var(--light-mid); }
+
+    .ethics-intro {
+      max-width: 600px;
+      margin-top: 20px;
+      font-size: 14px;
+      line-height: 1.9;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 50px;
+    }
+
+    .principles-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .principle-card {
+      border: 1px solid rgba(255,255,255,0.06);
+      padding: 32px 28px;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.4s, transform 0.3s;
+      cursor: none;
+    }
+
+    .principle-card:hover {
+      border-color: rgba(232, 196, 176, 0.25);
+      transform: translateY(-4px);
+    }
+
+    .principle-card::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(200, 125, 110, 0.06) 0%, transparent 50%);
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+    .principle-card:hover::before { opacity: 1; }
+
+    .principle-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 48px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.04);
+      position: absolute;
+      top: 6px; right: 16px;
+      line-height: 1;
+    }
+
+    .principle-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--blush);
+      margin-bottom: 10px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .principle-card p {
+      font-size: 13px;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.4);
+      position: relative;
+      z-index: 1;
+    }
+
+    .principle-card.wide {
+      grid-column: span 2;
+    }
+
+    .ethics-conclusion {
+      margin-top: 50px;
+      padding: 30px 36px;
+      border-left: 3px solid var(--rose);
+      background: rgba(200, 125, 110, 0.06);
+    }
+
+    .ethics-conclusion h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--blush);
+      margin-bottom: 12px;
+    }
+
+    .ethics-conclusion p {
+      font-size: 13px;
+      line-height: 1.85;
+      color: rgba(255,255,255,0.5);
+    }
+
+    /* ─── SUMMARY ─── */
+    .summary {
+      padding: 120px 80px;
+      background: var(--warm-white);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .summary::before {
+      content: '回顧';
+      position: absolute;
+      right: -10px; bottom: -20px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(100px, 14vw, 180px);
+      font-weight: 300;
+      color: rgba(46, 31, 26, 0.025);
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .summary-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      margin-top: 50px;
+      align-items: start;
+    }
+
+    .summary-reflection {
+      font-size: 14px;
+      line-height: 2;
+      color: var(--mid);
+    }
+
+    .summary-reflection p + p { margin-top: 16px; }
+
+    .summary-reflection blockquote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-style: italic;
+      color: var(--rose);
+      line-height: 1.6;
+      padding: 20px 0;
+      border-top: 1px solid var(--blush);
+      border-bottom: 1px solid var(--blush);
+      margin: 24px 0;
+    }
+
+    .summary-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .summary-card {
+      padding: 28px 24px;
+      border: 1px solid rgba(232, 196, 176, 0.25);
+      background: var(--cream);
+      transition: border-color 0.3s, transform 0.3s;
+    }
+
+    .summary-card:hover {
+      border-color: var(--blush);
+      transform: translateX(6px);
+    }
+
+    .summary-card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .summary-card-icon {
+      font-size: 22px;
+    }
+
+    .summary-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--deep);
+    }
+
+    .summary-card p {
+      font-size: 13px;
+      line-height: 1.85;
+      color: var(--mid);
+    }
+
+    .summary-card ul {
+      list-style: none;
+      margin-top: 8px;
+    }
+
+    .summary-card ul li {
+      font-size: 13px;
+      line-height: 1.85;
+      color: var(--mid);
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .summary-card ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--blush);
+    }
+
     /* ─── CONTACT ─── */
     .contact {
       background: var(--terracotta);
@@ -735,6 +1102,13 @@
       .documents .section-header { flex-direction: column; align-items: flex-start; gap: 16px; }
       .documents .section-header-right { text-align: left; }
       .docs-grid { grid-template-columns: 1fr; gap: 16px; }
+      .ai-creative { padding: 80px 36px; }
+      .ai-creative-content { grid-template-columns: 1fr; gap: 40px; }
+      .ai-ethics { padding: 80px 36px; }
+      .principles-grid { grid-template-columns: 1fr; }
+      .principle-card.wide { grid-column: span 1; }
+      .summary { padding: 80px 36px; }
+      .summary-content { grid-template-columns: 1fr; gap: 40px; }
       .contact { flex-direction: column; padding: 80px 36px; text-align: center; }
       footer { flex-direction: column; gap: 10px; padding: 30px 36px; text-align: center; }
       .about-visual { display: none; }
@@ -872,8 +1246,8 @@
       <a href="documents/bài 1.docx" class="doc-card reveal" download>
         <div class="doc-card-num">01</div>
         <div class="doc-card-badge"><span class="badge-dot"></span>DOCX</div>
-        <h3 class="doc-card-title">Bài tập 1</h3>
-        <p class="doc-card-desc">Bài tập nghiên cứu và phân tích trong lĩnh vực Marketing &amp; Truyền thông.</p>
+        <h3 class="doc-card-title">Quản lý tệp &amp; thư mục</h3>
+        <p class="doc-card-desc">Trình bày cấu trúc thư mục tối ưu, quy tắc đặt tên tệp đã thiết lập, kèm ảnh chụp minh họa chi tiết.</p>
         <div class="doc-card-footer">
           <span class="doc-card-size">21.8 MB</span>
           <span class="doc-card-download">Tải về <span class="arrow">→</span></span>
@@ -882,8 +1256,8 @@
       <a href="documents/bài 2.docx" class="doc-card reveal" download>
         <div class="doc-card-num">02</div>
         <div class="doc-card-badge"><span class="badge-dot"></span>DOCX</div>
-        <h3 class="doc-card-title">Bài tập 2</h3>
-        <p class="doc-card-desc">Bài tập phân tích chiến lược và xây dựng kế hoạch truyền thông.</p>
+        <h3 class="doc-card-title">Tìm kiếm &amp; đánh giá thông tin</h3>
+        <p class="doc-card-desc">Kết quả tìm kiếm học thuật bằng các toán tử nâng cao và bảng đánh giá nguồn tin đã thực hiện.</p>
         <div class="doc-card-footer">
           <span class="doc-card-size">19.5 KB</span>
           <span class="doc-card-download">Tải về <span class="arrow">→</span></span>
@@ -892,8 +1266,8 @@
       <a href="documents/bài 3.pdf" class="doc-card reveal" download>
         <div class="doc-card-num">03</div>
         <div class="doc-card-badge"><span class="badge-dot"></span>PDF</div>
-        <h3 class="doc-card-title">Bài tập 3</h3>
-        <p class="doc-card-desc">Báo cáo nghiên cứu thị trường và hành vi người tiêu dùng.</p>
+        <h3 class="doc-card-title">Viết Prompt hiệu quả</h3>
+        <p class="doc-card-desc">So sánh giữa Prompt ban đầu và Prompt cải tiến cùng kết quả đầu ra từ AI, phân tích và giải thích logic.</p>
         <div class="doc-card-footer">
           <span class="doc-card-size">944 KB</span>
           <span class="doc-card-download">Tải về <span class="arrow">→</span></span>
@@ -902,8 +1276,8 @@
       <a href="documents/bài 4.pdf" class="doc-card reveal" download>
         <div class="doc-card-num">04</div>
         <div class="doc-card-badge"><span class="badge-dot"></span>PDF</div>
-        <h3 class="doc-card-title">Bài tập 4</h3>
-        <p class="doc-card-desc">Bài tập ứng dụng công cụ truyền thông và quảng cáo kỹ thuật số.</p>
+        <h3 class="doc-card-title">Hợp tác trực tuyến</h3>
+        <p class="doc-card-desc">Minh chứng việc sử dụng công cụ quản lý dự án nhóm và cách thức phối hợp trực tuyến hiệu quả.</p>
         <div class="doc-card-footer">
           <span class="doc-card-size">640 KB</span>
           <span class="doc-card-download">Tải về <span class="arrow">→</span></span>
@@ -912,8 +1286,8 @@
       <a href="documents/bài 5.pdf" class="doc-card reveal" download>
         <div class="doc-card-num">05</div>
         <div class="doc-card-badge"><span class="badge-dot"></span>PDF</div>
-        <h3 class="doc-card-title">Bài tập 5</h3>
-        <p class="doc-card-desc">Đề án sáng tạo nội dung và chiến lược thương hiệu.</p>
+        <h3 class="doc-card-title">Sáng tạo nội dung với AI</h3>
+        <p class="doc-card-desc">Sản phẩm nội dung số hoàn thiện được hỗ trợ bởi AI — hình ảnh, video và bài viết sáng tạo.</p>
         <div class="doc-card-footer">
           <span class="doc-card-size">1.2 MB</span>
           <span class="doc-card-download">Tải về <span class="arrow">→</span></span>
@@ -922,13 +1296,182 @@
       <a href="documents/bài 6.pdf" class="doc-card reveal" download>
         <div class="doc-card-num">06</div>
         <div class="doc-card-badge"><span class="badge-dot"></span>PDF</div>
-        <h3 class="doc-card-title">Bài tập 6</h3>
-        <p class="doc-card-desc">Tổng kết và đánh giá kiến thức Marketing truyền thông tổng hợp.</p>
+        <h3 class="doc-card-title">AI có trách nhiệm</h3>
+        <p class="doc-card-desc">Bộ nguyên tắc cá nhân về sử dụng AI có trách nhiệm dựa trên các nghiên cứu đã thực hiện.</p>
         <div class="doc-card-footer">
           <span class="doc-card-size">349 KB</span>
           <span class="doc-card-download">Tải về <span class="arrow">→</span></span>
         </div>
       </a>
+    </div>
+  </section>
+
+  <!-- ─── AI CREATIVE ─── -->
+  <section class="ai-creative">
+    <p class="section-label reveal">Nhiệm vụ 5</p>
+    <h2 class="section-title reveal">Sáng tạo nội dung<br/>với <em>AI</em></h2>
+    <div class="ai-creative-content">
+      <div class="ai-process">
+        <div class="process-step reveal">
+          <span class="step-num">01</span>
+          <div class="step-content">
+            <h4>Xác định ý tưởng &amp; mục tiêu</h4>
+            <p>Lên ý tưởng cho sản phẩm nội dung số: xác định đối tượng mục tiêu, thông điệp cần truyền tải và định dạng nội dung phù hợp (hình ảnh, video, bài viết).</p>
+          </div>
+        </div>
+        <div class="process-step reveal">
+          <span class="step-num">02</span>
+          <div class="step-content">
+            <h4>Viết Prompt &amp; tạo nội dung thô</h4>
+            <p>Sử dụng kỹ thuật Prompt Engineering để tạo nội dung ban đầu với ChatGPT — bao gồm kịch bản, caption, và ý tưởng hình ảnh. Cải tiến prompt qua nhiều vòng lặp.</p>
+          </div>
+        </div>
+        <div class="process-step reveal">
+          <span class="step-num">03</span>
+          <div class="step-content">
+            <h4>Tạo hình ảnh &amp; thiết kế</h4>
+            <p>Dùng Canva AI và các công cụ AI tạo sinh hình ảnh để thiết kế visual content. Chỉnh sửa, phối màu và tối ưu bố cục cho sản phẩm cuối cùng.</p>
+          </div>
+        </div>
+        <div class="process-step reveal">
+          <span class="step-num">04</span>
+          <div class="step-content">
+            <h4>Biên tập &amp; hoàn thiện</h4>
+            <p>Review lại toàn bộ sản phẩm, chỉnh sửa nội dung cho phù hợp với thương hiệu cá nhân. Đảm bảo tính nhất quán và chất lượng chuyên nghiệp.</p>
+          </div>
+        </div>
+      </div>
+      <div class="ai-tools-showcase reveal">
+        <h3>Công cụ AI đã sử dụng</h3>
+        <div class="tool-item">
+          <div class="tool-icon">🤖</div>
+          <div class="tool-info">
+            <h4>ChatGPT</h4>
+            <p>Tạo kịch bản, viết caption, brainstorm ý tưởng sáng tạo</p>
+          </div>
+        </div>
+        <div class="tool-item">
+          <div class="tool-icon">🎨</div>
+          <div class="tool-info">
+            <h4>Canva AI</h4>
+            <p>Thiết kế đồ họa, tạo template và visual content</p>
+          </div>
+        </div>
+        <div class="tool-item">
+          <div class="tool-icon">🖼️</div>
+          <div class="tool-info">
+            <h4>AI Image Generator</h4>
+            <p>Tạo hình ảnh minh họa từ mô tả văn bản</p>
+          </div>
+        </div>
+        <div class="tool-item">
+          <div class="tool-icon">✍️</div>
+          <div class="tool-info">
+            <h4>Grammarly / QuillBot</h4>
+            <p>Kiểm tra ngữ pháp, paraphrase và cải thiện văn phong</p>
+          </div>
+        </div>
+        <div class="ai-product-note">
+          <strong>Sản phẩm cuối cùng:</strong> Bộ nội dung truyền thông số bao gồm bài viết, hình ảnh thiết kế và kế hoạch đăng tải — tất cả được hỗ trợ bởi các công cụ AI, thể hiện khả năng tận dụng tối đa công nghệ trong sáng tạo nội dung.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── AI ETHICS ─── -->
+  <section class="ai-ethics">
+    <p class="section-label reveal">Nhiệm vụ 6</p>
+    <h2 class="section-title reveal">AI có <em>trách nhiệm</em></h2>
+    <p class="ethics-intro reveal">Bộ nguyên tắc cá nhân về việc sử dụng AI có trách nhiệm — được xây dựng dựa trên nghiên cứu về đạo đức AI và kinh nghiệm thực tế trong quá trình học tập.</p>
+    <div class="principles-grid">
+      <div class="principle-card reveal">
+        <div class="principle-num">01</div>
+        <h3>Minh bạch trong sử dụng</h3>
+        <p>Luôn công khai khi sử dụng AI trong công việc học tập. Ghi rõ công cụ AI đã dùng, mục đích sử dụng và mức độ can thiệp của AI vào sản phẩm cuối cùng.</p>
+      </div>
+      <div class="principle-card reveal">
+        <div class="principle-num">02</div>
+        <h3>Kiểm chứng thông tin</h3>
+        <p>Không tin tưởng tuyệt đối vào kết quả từ AI. Luôn kiểm tra, đối chiếu thông tin với nguồn đáng tin cậy trước khi sử dụng cho mục đích học thuật.</p>
+      </div>
+      <div class="principle-card reveal">
+        <div class="principle-num">03</div>
+        <h3>Tôn trọng bản quyền</h3>
+        <p>Không sử dụng AI để sao chép hoặc đạo văn. Đảm bảo nội dung AI tạo ra được chỉnh sửa, bổ sung giá trị cá nhân và trích dẫn nguồn đúng quy cách.</p>
+      </div>
+      <div class="principle-card reveal">
+        <div class="principle-num">04</div>
+        <h3>Bảo vệ dữ liệu cá nhân</h3>
+        <p>Không chia sẻ thông tin nhạy cảm, dữ liệu cá nhân của mình hoặc người khác lên các nền tảng AI. Bảo vệ quyền riêng tư trong mọi tương tác.</p>
+      </div>
+      <div class="principle-card reveal">
+        <div class="principle-num">05</div>
+        <h3>AI là công cụ hỗ trợ, không thay thế</h3>
+        <p>Sử dụng AI như một trợ lý để nâng cao hiệu suất, không phải để thay thế quá trình tư duy và học tập. Luôn duy trì khả năng phân tích độc lập.</p>
+      </div>
+      <div class="principle-card reveal">
+        <div class="principle-num">06</div>
+        <h3>Công bằng &amp; không thiên vị</h3>
+        <p>Nhận thức rằng AI có thể chứa bias từ dữ liệu huấn luyện. Luôn đánh giá kết quả một cách phản biện và tránh lan truyền các nội dung thiên vị.</p>
+      </div>
+      <div class="principle-card wide reveal">
+        <div class="principle-num">07</div>
+        <h3>Sử dụng AI vì lợi ích cộng đồng</h3>
+        <p>Ứng dụng AI để tạo ra giá trị tích cực cho xã hội. Trong lĩnh vực Marketing &amp; Truyền thông, cam kết không sử dụng AI để tạo thông tin sai lệch, quảng cáo gây hiểu lầm hoặc thao túng người tiêu dùng.</p>
+      </div>
+    </div>
+    <div class="ethics-conclusion reveal">
+      <h3>Đề xuất giải pháp cho thách thức đạo đức AI</h3>
+      <p>Các cơ sở giáo dục cần xây dựng chính sách rõ ràng về việc sử dụng AI trong học tập — bao gồm hướng dẫn cụ thể về mức độ sử dụng cho phép, yêu cầu trích dẫn AI, và các buổi đào tạo về đạo đức AI. Sinh viên cần được trang bị tư duy phản biện để đánh giá và sử dụng AI một cách có trách nhiệm, thay vì cấm đoán hoàn toàn.</p>
+    </div>
+  </section>
+
+  <!-- ─── SUMMARY ─── -->
+  <section class="summary">
+    <p class="section-label reveal">Tổng kết</p>
+    <h2 class="section-title reveal">Nhìn lại<br/><em>hành trình</em></h2>
+    <div class="summary-content">
+      <div class="summary-reflection reveal">
+        <p>Quá trình xây dựng Portfolio này là một hành trình đầy ý nghĩa. Từ một sinh viên mới bước chân vào ngành Marketing &amp; Truyền thông, tôi đã được trải nghiệm và học hỏi rất nhiều điều mới mẻ về công nghệ số và trí tuệ nhân tạo.</p>
+        <p>Mỗi bài tập không chỉ là một nhiệm vụ cần hoàn thành, mà còn là cơ hội để tôi khám phá khả năng của bản thân. Từ việc quản lý tệp tin một cách khoa học, đến việc viết Prompt hiệu quả, hay sáng tạo nội dung với AI — tất cả đều giúp tôi trưởng thành hơn.</p>
+        <blockquote>"Hành trình vạn dặm bắt đầu từ một bước chân. Portfolio này chính là bước chân đầu tiên trên con đường chinh phục thế giới số."</blockquote>
+        <p>Thách thức lớn nhất tôi gặp phải là việc cân bằng giữa sự sáng tạo cá nhân và công cụ AI. Tôi nhận ra rằng AI là một trợ thủ đắc lực, nhưng giá trị thực sự nằm ở cách ta biết khai thác và đặt dấu ấn riêng vào mỗi sản phẩm.</p>
+      </div>
+      <div class="summary-cards">
+        <div class="summary-card reveal">
+          <div class="summary-card-header">
+            <span class="summary-card-icon">📚</span>
+            <h3>Kiến thức đã học</h3>
+          </div>
+          <ul>
+            <li>Quản lý tệp tin &amp; thư mục chuyên nghiệp</li>
+            <li>Kỹ năng tìm kiếm &amp; đánh giá thông tin học thuật</li>
+            <li>Kỹ thuật Prompt Engineering hiệu quả</li>
+            <li>Hợp tác trực tuyến &amp; quản lý dự án nhóm</li>
+            <li>Sáng tạo nội dung số với công cụ AI</li>
+            <li>Sử dụng AI có trách nhiệm &amp; đạo đức</li>
+          </ul>
+        </div>
+        <div class="summary-card reveal">
+          <div class="summary-card-header">
+            <span class="summary-card-icon">⚡</span>
+            <h3>Thách thức đã vượt qua</h3>
+          </div>
+          <ul>
+            <li>Làm quen với các công cụ AI hoàn toàn mới</li>
+            <li>Xây dựng website portfolio từ đầu</li>
+            <li>Cân bằng giữa sáng tạo cá nhân và hỗ trợ AI</li>
+            <li>Quản lý thời gian và hoàn thành 6 bài tập</li>
+          </ul>
+        </div>
+        <div class="summary-card reveal">
+          <div class="summary-card-header">
+            <span class="summary-card-icon">🚀</span>
+            <h3>Áp dụng trong tương lai</h3>
+          </div>
+          <p>Tôi sẽ tiếp tục ứng dụng các kỹ năng số đã học vào lĩnh vực Marketing &amp; Truyền thông — từ việc sử dụng AI để nghiên cứu thị trường, sáng tạo nội dung, đến việc phân tích dữ liệu và tối ưu chiến lược truyền thông. Đồng thời, luôn tuân thủ các nguyên tắc đạo đức AI đã cam kết.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -985,7 +1528,7 @@
     }
     animateRing();
 
-    document.querySelectorAll('a, button, .hobby-card, .doc-card').forEach(el => {
+    document.querySelectorAll('a, button, .hobby-card, .doc-card, .principle-card, .process-step, .summary-card').forEach(el => {
       el.addEventListener('mouseenter', () => {
         cursor.style.width = '20px';
         cursor.style.height = '20px';
